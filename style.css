@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f3e5e5;
+    color: #5c3d42;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(92, 61, 66, 0.12);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #754b55;
+}
+
+.quiz-container > p:first-of-type {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #806970;
+}
+
+#progress {
+    background: #f7eeee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+#question {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+#options {
+    display: grid;
+    gap: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e4cfd3;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: #faf1f3;
+}
+
+.option:has(input:checked) {
+    background: #f3e5e5;
+    border-color: #9b6874;
+}
+
+.option input {
+    accent-color: #754b55;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 18px;
+    background: #754b55;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #5c3d42;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#message,
+#result {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+#result {
+    font-weight: bold;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    #question {
+        font-size: 17px;
+    }
+
+    .buttons button {
+        flex: 1;
+    }
+}
